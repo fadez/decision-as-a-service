@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Decision-as-a-Service</title>
+    <meta name="description" content="A simple API for people who need a yes, a no, or a maybe." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="DaaS" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- OpenGraph -->
+    <meta property="og:site_name" content="Decision-as-a-Service">
+    <meta property="og:title" content="Decision-as-a-Service">
+    <meta property="og:description" content="A simple API for people who need a yes, a no, or a maybe.">
+    <meta property="og:image" content="https://daas.alexfadez.com/og.png">
+    <meta property="og:url" content="https://daas.alexfadez.com">
+    <meta property="og:type" content="website">
+
+    <!-- OpenGraph: X (Twitter) -->
+    <meta name="twitter:title" content="Decision-as-a-Service">
+    <meta name="twitter:description" content="A simple API for people who need a yes, a no, or a maybe.">
+    <meta name="twitter:image" content="https://daas.alexfadez.com/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/src/app.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <div class="app-content">
+            <!-- Status -->
+            <div class="status-badge">
+                <span class="status-dot">
+                    <span class="status-dot-ping"></span>
+                    <span class="status-dot-core"></span>
+                </span>
+                operational
+            </div>
+
+            <!-- Heading -->
+            <div class="heading-group">
+                <h1 class="heading-title">
+                    Decision-as-a-Service
+                </h1>
+                <p class="heading-subtitle">
+                    A simple API for people who need a yes, a no, or a maybe.
+                </p>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttons-grid">
+                <a href="/yes" target="_blank" class="btn btn--answer-yes" draggable="false">
+                    Yes
+                </a>
+
+                <a href="/no" target="_blank" class="btn btn--answer-no" draggable="false">
+                    No
+                </a>
+
+                <a href="/maybe" target="_blank" class="btn btn--answer-maybe" draggable="false">
+                    Maybe
+                </a>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <span class="inline lg:hidden">free</span>
+                <span class="hidden lg:inline">free forever</span>
+                <span class="inline lg:hidden">unlimited</span>
+                <span class="hidden lg:inline">no rate limits</span>
+                <span>built by <a href="https://github.com/fadez" target="_blank" class="footer-link" draggable="false">Aleks Fadez</a></span>
+                <span><a href="https://github.com/fadez/decision-as-a-service" target="_blank" class="footer-link" draggable="false">GitHub</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

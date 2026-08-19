@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "private": true,
+    "license": "UNLICENSED",
+    "author": {
+        "name": "Aleks Fadez",
+        "url": "https://github.com/fadez"
+    },
+    "repository": {
+        "url": "https://github.com/fadez/decision-as-a-service"
+    },
+    "scripts": {
+        "build": "vp build"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.3.3",
+        "tailwindcss": "^4.3.3"
+    },
+    "devDependencies": {
+        "vite-plus": "0.2.9"
+    },
+    "overrides": {
+        "vite": "npm:@voidzero-dev/vite-plus-core@0.2.9"
+    },
+    "devEngines": {
+        "packageManager": {
+            "name": "npm",
+            "version": "^11.0.0 || ^12.0.0",
+            "onFail": "download"
+        }
+    }
+}

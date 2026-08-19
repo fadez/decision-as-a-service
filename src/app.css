@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-sans: 'Outfit', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    --color-yes: var(--color-emerald-400);
+    --color-no: var(--color-rose-400);
+    --color-maybe: var(--color-purple-400);
+}
+
+@layer base {
+    * {
+        touch-action: pan-x pan-y;
+    }
+
+    html {
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-x: none;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-emerald-500) transparent;
+    }
+
+    body {
+        @apply flex min-h-dvh w-full overflow-x-clip bg-[#18181b] text-zinc-100 antialiased selection:bg-emerald-500 selection:text-zinc-100;
+    }
+}
+
+@layer components {
+    .app-shell {
+        @apply flex w-full items-center;
+    }
+
+    .app-content {
+        @apply flex w-full flex-col items-center justify-center gap-3 p-3 lg:zoom-150 lg:gap-9 lg:p-6;
+    }
+
+    .status-badge {
+        @apply flex items-center gap-2 font-mono text-xs text-zinc-500 uppercase select-none;
+    }
+
+    .status-dot {
+        @apply relative flex size-2;
+    }
+
+    .status-dot-ping {
+        @apply absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/75;
+    }
+
+    .status-dot-core {
+        @apply relative inline-flex size-2 rounded-full bg-emerald-500;
+    }
+
+    .heading-group {
+        @apply space-y-2 text-center;
+    }
+
+    .heading-title {
+        @apply text-3xl font-bold text-zinc-100;
+    }
+
+    .heading-subtitle {
+        @apply text-sm leading-relaxed text-zinc-400;
+    }
+
+    .buttons-grid {
+        @apply grid w-full max-w-sm grid-cols-3 gap-3;
+    }
+
+    .btn {
+        @apply flex touch-manipulation flex-col items-center gap-3 rounded-lg border border-white/15 bg-white/5 px-4 py-4 text-sm font-medium text-zinc-100 transition select-none focus-visible:outline-none active:scale-97;
+    }
+
+    .btn--answer-yes {
+        @apply hover:border-yes hover:bg-yes/10 hover:text-yes focus-visible:border-yes focus-visible:bg-yes/10 focus-visible:text-yes active:border-yes active:bg-yes/10 active:text-yes;
+    }
+
+    .btn--answer-no {
+        @apply hover:border-no hover:bg-no/10 hover:text-no focus-visible:border-no focus-visible:bg-no/10 focus-visible:text-no active:border-no active:bg-no/10 active:text-no;
+    }
+
+    .btn--answer-maybe {
+        @apply hover:border-maybe hover:bg-maybe/10 hover:text-maybe focus-visible:border-maybe focus-visible:bg-maybe/10 focus-visible:text-maybe active:border-maybe active:bg-maybe/10 active:text-maybe;
+    }
+
+    .footer {
+        @apply flex flex-wrap items-center gap-0.75 font-mono text-sm text-zinc-500 lg:gap-1.5 2xl:gap-3;
+    }
+
+    .footer > *:not(:last-child)::after {
+        @apply ml-0.75 opacity-50 lg:ml-1.5 2xl:ml-3;
+        content: '·';
+    }
+
+    .footer-link {
+        @apply font-medium underline decoration-white/15 underline-offset-2 transition-colors focus-within:text-zinc-100 focus-within:decoration-zinc-100 focus-within:outline-none hover:text-zinc-100 hover:decoration-zinc-100;
+    }
+}
