@@ -20,7 +20,7 @@ It's **free forever** and there are **no rate limits**. You're welcome.
 
 ## Usage
 
-### `/yes`
+### GET `/yes`
 
 **URL**
 
@@ -28,7 +28,7 @@ It's **free forever** and there are **no rate limits**. You're welcome.
 https://daas.alexfadez.com/yes
 ```
 
-**Response**
+**Response (HTTP 200)**
 
 ```json
 {
@@ -40,7 +40,7 @@ https://daas.alexfadez.com/yes
 }
 ```
 
-### `/no`
+### GET `/no`
 
 **URL**
 
@@ -48,7 +48,7 @@ https://daas.alexfadez.com/yes
 https://daas.alexfadez.com/no
 ```
 
-**Response**
+**Response (HTTP 200)**
 
 ```json
 {
@@ -60,7 +60,7 @@ https://daas.alexfadez.com/no
 }
 ```
 
-### `/maybe`
+### GET `/maybe`
 
 **URL**
 
@@ -68,7 +68,7 @@ https://daas.alexfadez.com/no
 https://daas.alexfadez.com/maybe
 ```
 
-**Response**
+**Response (HTTP 200)**
 
 ```json
 {
